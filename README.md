@@ -53,3 +53,11 @@
 </div>
 <br>
 
+## Objetivo general.
+Crear e implementar una aplicación móvil que sirva para gestionar los servicios de eventos y venta de productos en línea incorporando un módulo de marketing digital que facilite la promoción de actividades, las ventas y el análisis de datos para mejorar la compra en el sitio, optimizando así el alcance y la rentabilidad del negocio.
+
+## Justificación.
+La incorporación de un módulo de marketing digital en una aplicación móvil es esencial para que GYM BULL’S se mantenga competitivo y satisfaga las expectativas de los clientes actuales, quienes buscan soluciones digitales convenientes y personalizadas.
+Este módulo no solo mejorará el alcance del gimnasio, sino que también fortalecerá la lealtad de sus miembros a través de promociones atractivas, una tienda en línea intuitiva y una integración eficaz con redes sociales. Al facilitar la compra de productos y servicios desde la app, los clientes tendrán acceso inmediato a las ofertas del gimnasio, aumentando la satisfacción y las ventas.
+
+
