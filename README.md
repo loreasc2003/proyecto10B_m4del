@@ -61,9 +61,21 @@ La incorporación de un módulo de marketing digital en una aplicación móvil e
 Este módulo no solo mejorará el alcance del gimnasio, sino que también fortalecerá la lealtad de sus miembros a través de promociones atractivas, una tienda en línea intuitiva y una integración eficaz con redes sociales. Al facilitar la compra de productos y servicios desde la app, los clientes tendrán acceso inmediato a las ofertas del gimnasio, aumentando la satisfacción y las ventas.
 
 ## Sketches
-![sk1](https://github.com/user-attachments/assets/0bcd1ddd-47cf-4ace-b6c5-eab08f241c0b)
-![sk2](https://github.com/user-attachments/assets/0f5e28b0-c980-4842-954d-45f5f8d3cfc2)
-![sk3](https://github.com/user-attachments/assets/487320ef-90e1-4b9b-a5da-2ffc80116846)
-![sk4](https://github.com/user-attachments/assets/0d14f9a9-36d9-4ce7-a65b-227b0465d2f5)
+<img src="https://github.com/user-attachments/assets/0bcd1ddd-47cf-4ace-b6c5-eab08f241c0b" width="400" height="400">
+<img src="https://github.com/user-attachments/assets/0f5e28b0-c980-4842-954d-45f5f8d3cfc2" width="400" height="400">
+<img src="https://github.com/user-attachments/assets/487320ef-90e1-4b9b-a5da-2ffc80116846" width="400" height="400">
+<img src="https://github.com/user-attachments/assets/0d14f9a9-36d9-4ce7-a65b-227b0465d2f5" width="400" height="400">
 
+## Mockups
+![Registrate](https://github.com/user-attachments/assets/89774590-85c7-450e-aec7-0f7094defec5)
+![Recuperar_contraseña](https://github.com/user-attachments/assets/a98778d3-f405-489a-98be-580068a5f3d7)
+![Productos](https://github.com/user-attachments/assets/fa60b470-465d-4a0c-bb7e-8c18c163b0b5)
+![Inicio_de_Sesion](https://github.com/user-attachments/assets/f0437b3b-33e1-4b0e-8f60-123a04e8cb59)
+![GymBulls](https://github.com/user-attachments/assets/f1be79e9-1a99-4e1f-a46e-49610736434b)
+![detalle_pedidos](https://github.com/user-attachments/assets/aabe4cb3-cb61-425a-a97f-349b57b9b4bd)
+![detalle_pagos](https://github.com/user-attachments/assets/dcfd8991-4391-46d9-b3ec-0283731f3498)
+![detalle producto](https://github.com/user-attachments/assets/de9b957c-ff94-466d-ab00-110a117ce585)
+![carrito](https://github.com/user-attachments/assets/5304c99f-ba04-424a-a9dc-8c38b4a5e28c)
+![menu](https://github.com/user-attachments/assets/8f8c8feb-c530-45ea-9a50-0a330ff38058)
+![favoritos](https://github.com/user-attachments/assets/9aa6b59c-7487-428c-b4c4-e23b22554fc4)
 
