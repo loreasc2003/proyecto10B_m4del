@@ -2,20 +2,19 @@ import 'package:flutter/material.dart';
 import '../widgets/custom_button.dart';  // Importa el CustomButton
 import '../widgets/custom_text_field.dart';  // Importa el CustomTextField
 
-class Register extends StatefulWidget {
+class ForgotPassword extends StatefulWidget {
   @override
-  _RegisterState createState() => _RegisterState();
+  _ForgotPasswordState createState() => _ForgotPasswordState();
 }
 
-class _RegisterState extends State<Register> {
+class _ForgotPasswordState extends State<ForgotPassword> {
   final _emailController = TextEditingController();
-  final _passwordController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
 
-  void _register() {
+  void _recuperarContrasena() {
     if (_formKey.currentState!.validate()) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Usuario registrado exitosamente')),
+        SnackBar(content: Text('Correo de recuperación enviado')),
       );
       Navigator.pop(context);  // Regresa al login
     }
@@ -25,7 +24,7 @@ class _RegisterState extends State<Register> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 214, 212, 212), // Sobrescribir el color de AppBar en una vista específica
-      appBar: AppBar(title: Text('Registrar Cuenta')),
+      appBar: AppBar(title: Text('Recuperar Contraseña')),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
@@ -36,7 +35,7 @@ class _RegisterState extends State<Register> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text(
-                  'Crea una cuenta para poder acceder a todas las funcionalidades.',
+                  'Por favor ingrese su correo electrónico para recuperar su contraseña.',
                   style: TextStyle(fontSize: 16),
                   textAlign: TextAlign.center,
                 ),
@@ -46,15 +45,9 @@ class _RegisterState extends State<Register> {
                   controller: _emailController,
                 ),
                 SizedBox(height: 16),
-                CustomTextField(
-                  label: 'Contraseña',
-                  controller: _passwordController,
-                  obscureText: true,
-                ),
-                SizedBox(height: 16),
                 CustomButton(
-                  text: 'Registrar',
-                  onPressed: _register,
+                  text: 'Recuperar Contraseña',
+                  onPressed: _recuperarContrasena,
                 ),
               ],
             ),

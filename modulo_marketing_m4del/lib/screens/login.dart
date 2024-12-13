@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'home.dart'; // Asegúrate de que la ruta sea correcta para tu pantalla Home
-import 'register.dart'; // Importa la pantalla de registro
-import 'forgotPassword.dart'; // Importa la pantalla de recuperación de contraseña
+import '../widgets/custom_button.dart';  // Importa el CustomButton
+import '../widgets/custom_text_field.dart';  // Importa el CustomTextField
+import 'register.dart';  // Asegúrate de importar la pantalla de registro
+import 'forgot_password.dart';  // Asegúrate de importar la pantalla de recuperación de contraseña
 
 class Login extends StatefulWidget {
   @override
@@ -13,129 +14,80 @@ class _LoginState extends State<Login> {
   final _passwordController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
 
-  // Simula un usuario registrado (esto se puede mejorar con autenticación real)
-  final String _registeredEmail = "user@m4del.com";
-  final String _registeredPassword = "123"; 
-
   void _login() {
     if (_formKey.currentState!.validate()) {
-      String email = _emailController.text;
-      String password = _passwordController.text;
-
-      // Verificar si las credenciales coinciden con las del usuario registrado
-      if (email == _registeredEmail && password == _registeredPassword) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Inicio de sesión exitoso')),
-        );
-
-        // Redirigir al home y pasar el valor de éxito
-        Navigator.pop(context, true); // Regresa verdadero para indicar que inició sesión
-      } else {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Acceso denegado')),
-        );
-      }
+      // Aquí puedes agregar la lógica de inicio de sesión real
+      Navigator.pop(context, true);  // Retorna un valor verdadero para indicar inicio de sesión
     }
-  }
-
-  void _navigateToRegister() {
-    // Navegar a la pantalla de registro
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => Register()), // Redirige a la pantalla de registro
-    );
-  }
-
-  void _resetPassword() {
-    // Navegar a la pantalla de recuperación de contraseña
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => ForgotPassword()), // Redirige a la pantalla de recuperación de contraseña
-    );
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Iniciar Sesión'),
-      ),
-      body: Center(  // Usamos Center para centrar el contenido
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Form(
-            key: _formKey,  // Asociamos el formulario a la clave global
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center, // Centra el contenido
-              children: [
-                // Campo para correo electrónico
-                TextFormField(
-                  controller: _emailController,
-                  decoration: InputDecoration(
-                    labelText: 'Correo electrónico',
-                    border: OutlineInputBorder(),
-                  ),
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return 'Por favor ingresa tu correo electrónico';
-                    }
-                    // Validación simple para el formato del correo
-                    if (!RegExp(r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$").hasMatch(value)) {
-                      return 'Por favor ingresa un correo electrónico válido';
-                    }
-                    return null;
-                  },
+      backgroundColor: const Color.fromARGB(255, 214, 212, 212), // Sobrescribir el color de AppBar en una vista específica
+      appBar: AppBar(title: Text('Iniciar Sesión')),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Form(
+          key: _formKey,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              CustomTextField(
+                label: 'Correo electrónico',
+                controller: _emailController,
+              ),
+              SizedBox(height: 16),
+              CustomTextField(
+                label: 'Contraseña',
+                controller: _passwordController,
+                obscureText: true,
+              ),
+              SizedBox(height: 16),
+              CustomButton(
+                text: 'Iniciar Sesión',
+                onPressed: _login,
+              ),
+              SizedBox(height: 16),
+              // Botón de "Iniciar sesión con Google" con icono
+              CustomButton(
+                text: 'Iniciar sesión con Google',
+                onPressed: () {
+                  // Aquí puedes agregar la lógica para el login con Google
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(content: Text('Función de Google no disponible')),
+                  );
+                },
+              ),
+              SizedBox(height: 16),
+              // Nuevo botón para ir a la pantalla de "Registrar"
+              TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Register()),
+                  );
+                },
+                child: Text(
+                  '¿No tienes cuenta? Regístrate',
+                  style: TextStyle(fontSize: 16, color: Colors.black),
                 ),
-                SizedBox(height: 16),
-                
-                // Campo para contraseña
-                TextFormField(
-                  controller: _passwordController,
-                  decoration: InputDecoration(
-                    labelText: 'Contraseña',
-                    border: OutlineInputBorder(),
-                  ),
-                  obscureText: true,
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return 'Por favor ingresa tu contraseña';
-                    }
-                    return null;
-                  },
+              ),
+              SizedBox(height: 8),
+              // Nuevo botón para ir a la pantalla de "Recuperar Contraseña"
+              TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ForgotPassword()),
+                  );
+                },
+                child: Text(
+                  '¿Olvidaste tu contraseña?',
+                  style: TextStyle(fontSize: 16, color: Colors.black),
                 ),
-                SizedBox(height: 16),
-                
-                // Botón para iniciar sesión
-                ElevatedButton(
-                  onPressed: _login,
-                  child: Text('Iniciar Sesión'),
-                ),
-                SizedBox(height: 16),
-                
-                // Texto explicativo de las opciones adicionales
-                Text(
-                  '¿No tienes una cuenta?',
-                  style: TextStyle(fontSize: 16),
-                ),
-                SizedBox(height: 8),
-                
-                // Botones para Registrar o Recuperar Contraseña
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    TextButton(
-                      onPressed: _navigateToRegister,
-                      child: Text('Regístrate aquí'),
-                    ),
-                    SizedBox(width: 16),
-                    TextButton(
-                      onPressed: _resetPassword,
-                      child: Text('¿Olvidaste tu contraseña?'),
-                    ),
-                  ],
-                ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),
