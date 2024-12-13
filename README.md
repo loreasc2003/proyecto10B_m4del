@@ -60,4 +60,10 @@ Crear e implementar una aplicación móvil que sirva para gestionar los servicio
 La incorporación de un módulo de marketing digital en una aplicación móvil es esencial para que GYM BULL’S se mantenga competitivo y satisfaga las expectativas de los clientes actuales, quienes buscan soluciones digitales convenientes y personalizadas.
 Este módulo no solo mejorará el alcance del gimnasio, sino que también fortalecerá la lealtad de sus miembros a través de promociones atractivas, una tienda en línea intuitiva y una integración eficaz con redes sociales. Al facilitar la compra de productos y servicios desde la app, los clientes tendrán acceso inmediato a las ofertas del gimnasio, aumentando la satisfacción y las ventas.
 
+## Sketches
+![sk1](https://github.com/user-attachments/assets/0bcd1ddd-47cf-4ace-b6c5-eab08f241c0b)
+![sk2](https://github.com/user-attachments/assets/0f5e28b0-c980-4842-954d-45f5f8d3cfc2)
+![sk3](https://github.com/user-attachments/assets/487320ef-90e1-4b9b-a5da-2ffc80116846)
+![sk4](https://github.com/user-attachments/assets/0d14f9a9-36d9-4ce7-a65b-227b0465d2f5)
+
 
